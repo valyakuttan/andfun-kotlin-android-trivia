@@ -43,10 +43,17 @@
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_gameFragment_to_gameOverFragment"
-            app:destination="@id/gameOverFragment3"
+            app:destination="@id/gameOverFragment"
             app:popUpTo="@id/gameFragment"
             app:popUpToInclusive="true" />
     </fragment>
+
+    <!-- TODO (01) Add the GameWonFragment to the Navigation Graph
+             Go to the navigation editor and click the add button.  Add fragment_game_won. -->
+    <!-- TODO (01) Add popUpTo gameFragment with inclusive=true
+            Go to the editor, select PopTo GameFragment in the attributes pane
+            with the inclusive flag checked. -->
+
     <fragment
         android:id="@+id/gameWonFragment"
         android:name="com.example.android.navigation.GameWonFragment"
@@ -58,8 +65,15 @@
             app:popUpTo="@id/titleFragment"
             app:popUpToInclusive="false" />
     </fragment>
+
+    <!-- TODO (02) Add the GameOverFragment to the Navigation Graph
+            Go to the navigation editor and click the add button.  Add fragment_game_over. -->
+    <!-- TODO (02) Add popUpTo gameFragment with inclusive=true
+                 Go to the editor, select PopTo GameFragment in the attributes pane
+                 with the inclusive flag checked. -->
+
     <fragment
-        android:id="@+id/gameOverFragment3"
+        android:id="@+id/gameOverFragment"
         android:name="com.example.android.navigation.GameOverFragment"
         android:label="fragment_game_over"
         tools:layout="@layout/fragment_game_over" >
@@ -70,8 +84,4 @@
             app:popUpToInclusive="false" />
     </fragment>
 
-    <!-- TODO (01) Add the GameWonFragment to the Navigation Graph
-             Go to the navigation editor and click the add button.  Add fragment_game_won. -->
-    <!-- TODO (02) Add the GameOverFragment to the Navigation Graph
-             Go to the navigation editor and click the add button.  Add fragment_game_over. -->
 </navigation>
