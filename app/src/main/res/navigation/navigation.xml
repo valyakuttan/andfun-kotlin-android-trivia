@@ -27,7 +27,11 @@
         tools:layout="@layout/fragment_title">
         <action
             android:id="@+id/action_titleFragment_to_gameFragment"
-            app:destination="@id/gameFragment" />
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
         <!-- TODO (03) Add the sliding animation to the titleFragment_to_gameFragment action
              Go to the navigation editor and select slide_in_left for Enter and Pop Enter
              and slide_in_right for the Exit and Pop Exit animations -->
@@ -43,6 +47,10 @@
         <action
             android:id="@+id/action_gameFragment_to_gameOverFragment"
             app:destination="@id/gameOverFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
             app:popUpTo="@+id/gameFragment"
             app:popUpToInclusive="true" />
         />
@@ -55,6 +63,10 @@
         <action
             android:id="@+id/action_gameFragment_to_gameWonFragment"
             app:destination="@id/gameWonFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
             app:popUpTo="@+id/gameFragment"
             app:popUpToInclusive="true" />
         <!-- TODO (04) Add the sliding animation to the gameFragment to gameWonFragment action
@@ -69,7 +81,11 @@
         <action
             android:id="@+id/action_gameWonFragment_to_gameFragment"
             app:destination="@id/gameFragment"
-            app:popUpTo="@+id/titleFragment"/>
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/titleFragment" />
         <argument
             android:name="numQuestions"
             app:argType="integer" />
@@ -88,6 +104,10 @@
         <action
             android:id="@+id/action_gameOverFragment_to_gameFragment"
             app:destination="@id/gameFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
             app:popUpTo="@+id/titleFragment" />
         <!-- TODO (06) Add the sliding animation to the gameOverFragment to gameFragment action
              Go to the navigation editor and select slide_in_left for Enter and Pop Enter
